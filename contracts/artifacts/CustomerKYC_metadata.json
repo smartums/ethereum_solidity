@@ -1,0 +1,239 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_data",
+						"type": "string"
+					}
+				],
+				"name": "addNewCustomer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_id",
+						"type": "address"
+					}
+				],
+				"name": "addNewbank",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_id",
+						"type": "address"
+					}
+				],
+				"name": "allowBankToAddNewCustomer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_id",
+						"type": "address"
+					}
+				],
+				"name": "allowBankToPerformKyc",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_id",
+						"type": "address"
+					}
+				],
+				"name": "blockBankToAddNewCustomer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_id",
+						"type": "address"
+					}
+				],
+				"name": "blockBankToPerformKyc",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "checkKycSattus",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "kycStatus",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_id",
+						"type": "address"
+					}
+				],
+				"name": "getBankDetails",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "kycCount",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "addCustomerPrivilege",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "kycPrivilege",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "updateKyc",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "viewCustomerData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "bankName",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "kycStatus",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/KYC.sol": "CustomerKYC"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/KYC.sol": {
+			"keccak256": "0x3ad06a9b4c4e454e667fb9589305a717f764265c05547846f7d17fcc0f76afab",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2c45e5b05e9b8914132763b883e64b9b49daad76399cefca7274d5008964f781",
+				"dweb:/ipfs/Qmb6TKsMs4CLHwJZzmeBKNujmE2C3CutADfVw33rHU6Pqb"
+			]
+		}
+	},
+	"version": 1
+}

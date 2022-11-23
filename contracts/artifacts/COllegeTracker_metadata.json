@@ -1,0 +1,209 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_collegeName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_regNo",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_collegeAddress",
+						"type": "address"
+					}
+				],
+				"name": "addNewCollege",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_collegeAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_studentName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phoneNo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_courseName",
+						"type": "string"
+					}
+				],
+				"name": "addNewStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_collegeAddress",
+						"type": "address"
+					}
+				],
+				"name": "allowCollegeAddingNewStudents",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_collegeAddress",
+						"type": "address"
+					}
+				],
+				"name": "blockCollegeAddingNewStudents",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_collegeAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_studentName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_newCourseName",
+						"type": "string"
+					}
+				],
+				"name": "changeStudentCourse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_collegeAddress",
+						"type": "address"
+					}
+				],
+				"name": "getCollegeDetails",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_studentName",
+						"type": "string"
+					}
+				],
+				"name": "getStudentDetails",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/CollegeTracker.sol": "COllegeTracker"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/CollegeTracker.sol": {
+			"keccak256": "0xdcdcf93c3b6f1058fdfd0bda3fc42742dd268014f744a7dc25f69e0b6c4cde6e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://11511018d6e151ae14b1eb86c6c1847255370317728b50569f64c2210c5911d3",
+				"dweb:/ipfs/QmRH5JDZNhMBJHWVNRTLWk36PNmHRNhMaMiPeuiMQWJmPx"
+			]
+		}
+	},
+	"version": 1
+}
