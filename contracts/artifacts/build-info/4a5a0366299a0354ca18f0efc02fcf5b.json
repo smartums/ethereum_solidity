@@ -1,0 +1,495 @@
+{
+	"id": "4a5a0366299a0354ca18f0efc02fcf5b",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/StructDemo.sol": {
+				"content": "//SPDX-License-Identifier: MIT\npragma solidity ^0.8.7;\n\ncontract StructDemo{\n\n    struct learner {\n        string name;\n        uint8 age;\n        //uint32 phoneNo;\n        //string addresses;\n    }\n\n    //To assigne an auto generated ID to each lerner\n    // 1 => (\"MKS1\", 30)\n    // 2 => (\"MKS2\", 33)\n    mapping(uint8 => learner) learners;\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/StructDemo.sol": {
+				"StructDemo": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/StructDemo.sol\":56:344  contract StructDemo{... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/StructDemo.sol\":56:344  contract StructDemo{... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220a7a4d957764d00732c2771154e21e172ce689816452e5d7d89277674153fa0bb64736f6c63430008070033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220a7a4d957764d00732c2771154e21e172ce689816452e5d7d89277674153fa0bb64736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xA7 LOG4 0xD9 JUMPI PUSH23 0x4D00732C2771154E21E172CE689816452E5D7D89277674 ISZERO EXTCODEHASH LOG0 0xBB PUSH5 0x736F6C6343 STOP ADDMOD SMOD STOP CALLER ",
+							"sourceMap": "56:288:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea2646970667358221220a7a4d957764d00732c2771154e21e172ce689816452e5d7d89277674153fa0bb64736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xA7 LOG4 0xD9 JUMPI PUSH23 0x4D00732C2771154E21E172CE689816452E5D7D89277674 ISZERO EXTCODEHASH LOG0 0xBB PUSH5 0x736F6C6343 STOP ADDMOD SMOD STOP CALLER ",
+							"sourceMap": "56:288:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "66",
+								"totalCost": "12666"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 56,
+									"end": 344,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220a7a4d957764d00732c2771154e21e172ce689816452e5d7d89277674153fa0bb64736f6c63430008070033",
+									".code": [
+										{
+											"begin": 56,
+											"end": 344,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 56,
+											"end": 344,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 56,
+											"end": 344,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 56,
+											"end": 344,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 56,
+											"end": 344,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 56,
+											"end": 344,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/StructDemo.sol\":\"StructDemo\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/StructDemo.sol\":{\"keccak256\":\"0x8c6cf5d07c1921debffe0946566c3d5aa8a5427fe7d1c25cd5d7eb509e133638\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6d3a02666db90ebf29116af7177ee623a4330be68d0003bbe03d91afc39b11a4\",\"dweb:/ipfs/QmWvW9DhhNBxTsYLzN875W4k7z2rtL3eoLP5cHDdvWM6pM\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 11,
+								"contract": "contracts/StructDemo.sol:StructDemo",
+								"label": "learners",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_mapping(t_uint8,t_struct(learner)6_storage)"
+							}
+						],
+						"types": {
+							"t_mapping(t_uint8,t_struct(learner)6_storage)": {
+								"encoding": "mapping",
+								"key": "t_uint8",
+								"label": "mapping(uint8 => struct StructDemo.learner)",
+								"numberOfBytes": "32",
+								"value": "t_struct(learner)6_storage"
+							},
+							"t_string_storage": {
+								"encoding": "bytes",
+								"label": "string",
+								"numberOfBytes": "32"
+							},
+							"t_struct(learner)6_storage": {
+								"encoding": "inplace",
+								"label": "struct StructDemo.learner",
+								"members": [
+									{
+										"astId": 3,
+										"contract": "contracts/StructDemo.sol:StructDemo",
+										"label": "name",
+										"offset": 0,
+										"slot": "0",
+										"type": "t_string_storage"
+									},
+									{
+										"astId": 5,
+										"contract": "contracts/StructDemo.sol:StructDemo",
+										"label": "age",
+										"offset": 0,
+										"slot": "1",
+										"type": "t_uint8"
+									}
+								],
+								"numberOfBytes": "64"
+							},
+							"t_uint8": {
+								"encoding": "inplace",
+								"label": "uint8",
+								"numberOfBytes": "1"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/StructDemo.sol": {
+				"ast": {
+					"absolutePath": "contracts/StructDemo.sol",
+					"exportedSymbols": {
+						"StructDemo": [
+							12
+						]
+					},
+					"id": 13,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".7"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "31:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 12,
+							"linearizedBaseContracts": [
+								12
+							],
+							"name": "StructDemo",
+							"nameLocation": "65:10:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "StructDemo.learner",
+									"id": 6,
+									"members": [
+										{
+											"constant": false,
+											"id": 3,
+											"mutability": "mutable",
+											"name": "name",
+											"nameLocation": "114:4:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 6,
+											"src": "107:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 2,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "107:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 5,
+											"mutability": "mutable",
+											"name": "age",
+											"nameLocation": "134:3:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 6,
+											"src": "128:9:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint8",
+												"typeString": "uint8"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "uint8",
+												"nodeType": "ElementaryTypeName",
+												"src": "128:5:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint8",
+													"typeString": "uint8"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "learner",
+									"nameLocation": "89:7:0",
+									"nodeType": "StructDefinition",
+									"scope": 12,
+									"src": "82:116:0",
+									"visibility": "public"
+								},
+								{
+									"constant": false,
+									"id": 11,
+									"mutability": "mutable",
+									"name": "learners",
+									"nameLocation": "333:8:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 12,
+									"src": "307:34:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_mapping$_t_uint8_$_t_struct$_learner_$6_storage_$",
+										"typeString": "mapping(uint8 => struct StructDemo.learner)"
+									},
+									"typeName": {
+										"id": 10,
+										"keyType": {
+											"id": 7,
+											"name": "uint8",
+											"nodeType": "ElementaryTypeName",
+											"src": "315:5:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint8",
+												"typeString": "uint8"
+											}
+										},
+										"nodeType": "Mapping",
+										"src": "307:25:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_mapping$_t_uint8_$_t_struct$_learner_$6_storage_$",
+											"typeString": "mapping(uint8 => struct StructDemo.learner)"
+										},
+										"valueType": {
+											"id": 9,
+											"nodeType": "UserDefinedTypeName",
+											"pathNode": {
+												"id": 8,
+												"name": "learner",
+												"nodeType": "IdentifierPath",
+												"referencedDeclaration": 6,
+												"src": "324:7:0"
+											},
+											"referencedDeclaration": 6,
+											"src": "324:7:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_struct$_learner_$6_storage_ptr",
+												"typeString": "struct StructDemo.learner"
+											}
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"scope": 13,
+							"src": "56:288:0",
+							"usedErrors": []
+						}
+					],
+					"src": "31:313:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
