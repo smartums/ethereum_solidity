@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -117,22 +122,22 @@
 				"outputs": [
 					{
 						"internalType": "string",
-						"name": "",
+						"name": "collegeName",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "",
+						"name": "registrationNo",
 						"type": "string"
 					},
 					{
 						"internalType": "bool",
-						"name": "",
+						"name": "addStudentPrivilege",
 						"type": "bool"
 					},
 					{
 						"internalType": "uint8",
-						"name": "",
+						"name": "noOfStudents",
 						"type": "uint8"
 					}
 				],
@@ -151,17 +156,17 @@
 				"outputs": [
 					{
 						"internalType": "string",
-						"name": "",
+						"name": "studentName",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "",
+						"name": "courseName",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "",
+						"name": "phoneNo",
 						"type": "string"
 					}
 				],
@@ -197,11 +202,11 @@
 	},
 	"sources": {
 		"contracts/CollegeTracker.sol": {
-			"keccak256": "0xdcdcf93c3b6f1058fdfd0bda3fc42742dd268014f744a7dc25f69e0b6c4cde6e",
+			"keccak256": "0x5ce0b86a09577fba6b5c560965d8a04d4325cfe19e9a5a0fbf51ded3f8251606",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://11511018d6e151ae14b1eb86c6c1847255370317728b50569f64c2210c5911d3",
-				"dweb:/ipfs/QmRH5JDZNhMBJHWVNRTLWk36PNmHRNhMaMiPeuiMQWJmPx"
+				"bzz-raw://12474087e0897b94e0e6ede9f7ed10ffb1176f4b032a22271b60babed32de614",
+				"dweb:/ipfs/QmYQCJK85b2ZZg7FoxgmQoVcEnAvn6LPjfYK9bJuZEhmHE"
 			]
 		}
 	},

@@ -37,7 +37,7 @@
 					},
 					{
 						"internalType": "address",
-						"name": "_id",
+						"name": "_bankAddress",
 						"type": "address"
 					}
 				],
@@ -50,7 +50,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_id",
+						"name": "_bankAddress",
 						"type": "address"
 					}
 				],
@@ -63,7 +63,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_id",
+						"name": "_bankAddress",
 						"type": "address"
 					}
 				],
@@ -76,7 +76,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_id",
+						"name": "_bankAddress",
 						"type": "address"
 					}
 				],
@@ -89,7 +89,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_id",
+						"name": "_bankAddress",
 						"type": "address"
 					}
 				],
@@ -101,27 +101,8 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					}
-				],
-				"name": "checkKycSattus",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "kycStatus",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "address",
-						"name": "_id",
+						"name": "_bankAddress",
 						"type": "address"
 					}
 				],
@@ -159,20 +140,7 @@
 						"type": "string"
 					}
 				],
-				"name": "updateKyc",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					}
-				],
-				"name": "viewCustomerData",
+				"name": "getCustomerData",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -197,6 +165,38 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getKycStatus",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "kycStatus",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "performKyc",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -212,7 +212,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/KYC.sol": "CustomerKYC"
+			"contracts/CustomerKYC.sol": "CustomerKYC"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -226,12 +226,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/KYC.sol": {
-			"keccak256": "0x3ad06a9b4c4e454e667fb9589305a717f764265c05547846f7d17fcc0f76afab",
+		"contracts/CustomerKYC.sol": {
+			"keccak256": "0x233fea54be9c9e02f2a5daece6487087ef36394d919f47eb0f719b1bc9a73aad",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2c45e5b05e9b8914132763b883e64b9b49daad76399cefca7274d5008964f781",
-				"dweb:/ipfs/Qmb6TKsMs4CLHwJZzmeBKNujmE2C3CutADfVw33rHU6Pqb"
+				"bzz-raw://de6af6c413e63a1a6acbd02d4b188654827430b7211f16ab78b2e4efecad5187",
+				"dweb:/ipfs/QmVtRwR7joCNyXCFkMz7UXGTgZXLNnM41qiEMhWY1C7z4R"
 			]
 		}
 	},

@@ -2,24 +2,24 @@
 pragma solidity ^0.8.17;
 
 contract CustomerKYC {
-    address centralBankAddress;
+    address rbiAddress;
 
     constructor() {
-        centralBankAddress = msg.sender;
+        rbiAddress = msg.sender;
     }
 
     modifier OnlyAdmin() {
         require(
-            msg.sender == centralBankAddress,
-            "You are not an admin to perform this action."
+            msg.sender == rbiAddress,
+            "Only ADMIN can perform this action!"
         );
         _;
     }
 
     modifier OnlyBank() {
         require(
-            msg.sender != centralBankAddress,
-            "Admin can't perform this action."
+            msg.sender != rbiAddress,
+            "Only Bank can perform this Action!"
         );
         _;
     }
@@ -27,7 +27,7 @@ contract CustomerKYC {
     modifier isAddCustomerPrivileged() {
         require(
             banks[msg.sender].addCustomerPrivilege,
-            "Bank is not allowed to add new customer."
+            "You don't have permission to add new customers, Please contact to RBI ADMIN!"
         );
         _;
     }
@@ -35,21 +35,21 @@ contract CustomerKYC {
     modifier isKycPrivileged() {
         require(
             banks[msg.sender].kycPrivilege,
-            "Bank is not allowed to perform Kyc."
+            "You don't have permission to perform customer KYC, Please contact to RBI ADMIN!"
         );
         _;
     }
 
     modifier isValidBankCustomer(string memory custName) {
         require(
-            msg.sender == customers[custName].bankId,
-            "Customer doesn't belong to this bank"
+            msg.sender == customers[custName].bankAddress,
+            "Customer doesn't exist in your bank!"
         );
         _;
     }
 
     struct Bank {
-        address id;
+        address bankAddress;
         string name;
         uint8 kycCount;
         bool addCustomerPrivilege;
@@ -59,7 +59,7 @@ contract CustomerKYC {
     struct Customer {
         string name;
         string data;
-        address bankId;
+        address bankAddress;
         string bankName;
         bool kycStatus;
     }
@@ -67,11 +67,9 @@ contract CustomerKYC {
     mapping(address => Bank) banks;
     mapping(string => Customer) customers;
 
-    function addNewbank(string memory _name, address _id) public OnlyAdmin {
-        banks[_id].id = _id;
-        banks[_id].name = _name;
-        banks[_id].addCustomerPrivilege = true;
-        banks[_id].kycPrivilege = true;
+    function addNewbank(string memory _name, address _bankAddress) public OnlyAdmin {
+        banks[_bankAddress].bankAddress = _bankAddress;
+        banks[_bankAddress].name = _name;
     }
 
     function addNewCustomer(string memory _name, string memory _data)
@@ -79,25 +77,22 @@ contract CustomerKYC {
         OnlyBank
         isAddCustomerPrivileged
     {
-        //require(banks[msg.sender].addCustomerPrevilidge,"Bank is not allowed to add new customer.");
         customers[_name].name = _name;
         customers[_name].data = _data;
-        customers[_name].bankId = msg.sender;
+        customers[_name].bankAddress = msg.sender;
         customers[_name].bankName = banks[msg.sender].name;
-        //customers[_name].kycStatus = false;
     }
 
-    function checkKycSattus(string memory _name)
+    function getKycStatus(string memory _name)
         public
         view
         OnlyBank
         returns (bool kycStatus)
     {
-        //require(customers[_name], "Customer doesn't exist.");
         return (customers[_name].kycStatus);
     }
 
-    function updateKyc(string memory _name)
+    function performKyc(string memory _name)
         public
         OnlyBank
         isValidBankCustomer(_name)
@@ -107,23 +102,23 @@ contract CustomerKYC {
         banks[msg.sender].kycCount += 1;
     }
 
-    function blockBankToAddNewCustomer(address _id) public OnlyAdmin {
-        banks[_id].addCustomerPrivilege = false;
+    function blockBankToAddNewCustomer(address _bankAddress) public OnlyAdmin {
+        banks[_bankAddress].addCustomerPrivilege = false;
     }
 
-    function blockBankToPerformKyc(address _id) public OnlyAdmin {
-        banks[_id].kycPrivilege = false;
+    function blockBankToPerformKyc(address _bankAddress) public OnlyAdmin {
+        banks[_bankAddress].kycPrivilege = false;
     }
 
-    function allowBankToAddNewCustomer(address _id) public OnlyAdmin {
-        banks[_id].addCustomerPrivilege = true;
+    function allowBankToAddNewCustomer(address _bankAddress) public OnlyAdmin {
+        banks[_bankAddress].addCustomerPrivilege = true;
     }
 
-    function allowBankToPerformKyc(address _id) public OnlyAdmin {
-        banks[_id].kycPrivilege = true;
+    function allowBankToPerformKyc(address _bankAddress) public OnlyAdmin {
+        banks[_bankAddress].kycPrivilege = true;
     }
 
-    function viewCustomerData(string memory _name)
+    function getCustomerData(string memory _name)
         public
         view
         OnlyBank
@@ -142,7 +137,7 @@ contract CustomerKYC {
         );
     }
 
-    function getBankDetails(address _id)
+    function getBankDetails(address _bankAddress)
         public
         view
         OnlyAdmin
@@ -154,10 +149,10 @@ contract CustomerKYC {
         )
     {
         return (
-            banks[_id].name,
-            banks[_id].kycCount,
-            banks[_id].addCustomerPrivilege,
-            banks[_id].kycPrivilege
+            banks[_bankAddress].name,
+            banks[_bankAddress].kycCount,
+            banks[_bankAddress].addCustomerPrivilege,
+            banks[_bankAddress].kycPrivilege
         );
     }
 }
